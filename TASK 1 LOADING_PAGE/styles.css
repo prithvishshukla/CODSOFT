@@ -1,0 +1,186 @@
+    /* Reset default margin and set base font and background */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+        color: #fff;
+        min-height: 100vh; /* Ensure body takes full viewport height */
+        box-sizing: border-box;
+    }
+
+    /* Header styling */
+    header {
+        padding: 40px 0 20px 0;
+        text-align: center;
+        background: rgba(0,0,0,0.08); /* Subtle header background */
+        box-shadow: 0 2px 8px rgba(37,117,252,0.08);
+    }
+
+    /* Main heading in header */
+    header h1 {
+        margin: 0;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-shadow: 0 2px 8px rgba(37,117,252,0.15);
+    }
+
+    /* Subheading in header */
+    header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        opacity: 0.9;
+    }
+
+    /* Call-to-action container */
+    .cta {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        gap: 20px; /* Add gap for multiple buttons */
+    }
+
+    /* Call-to-action button/link */
+    .cta a {
+        background: #fff;
+        color: #2575fc;
+        padding: 15px 40px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(37,117,252,0.12);
+        border: 2px solid transparent;
+        outline: none;
+    }
+
+    /* CTA button hover and focus effect */
+    .cta a:hover,
+    .cta a:focus {
+        background: #2575fc;
+        color: #fff;
+        border: 2px solid #fff;
+        box-shadow: 0 4px 16px rgba(37,117,252,0.18);
+    }
+
+    /* Features section layout */
+    section.features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 40px 0;
+        padding: 0 20px; /* Add horizontal padding */
+    }
+
+    /* Individual feature card */
+    .feature {
+        background: rgba(255,255,255,0.1);
+        border-radius: 16px;
+        padding: 30px 20px;
+        width: 280px;
+        text-align: center;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+        border: 1px solid rgba(255,255,255,0.08);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Feature card hover effect */
+    .feature:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(37,117,252,0.18);
+        border-color: #fff;
+    }
+
+    /* Feature icon styling (if used) */
+    .feature .icon {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+        color: #fff;
+        opacity: 0.85;
+        display: block;
+    }
+
+    /* Feature title styling */
+    .feature h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #fff;
+        text-shadow: 0 2px 8px rgba(37,117,252,0.15);
+        margin-bottom: 12px;
+        transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    /* Feature description text */
+    .feature p {
+        font-size: 1rem;
+        opacity: 0.95;
+        margin-bottom: 0;
+    }
+
+    /* Add a subtle divider between sections */
+    .section-divider {
+        width: 60px;
+        height: 4px;
+        background: #fff;
+        opacity: 0.2;
+        margin: 40px auto;
+        border-radius: 2px;
+    }
+
+    /* Footer styling */
+    footer {
+        text-align: center;
+        padding: 30px 0 10px 0;
+        font-size: 0.95rem;
+        color: #e0e0e0;
+        background: rgba(0,0,0,0.06);
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Responsive layout for features section on small screens */
+    @media (max-width: 800px) {
+        section.features {
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature {
+            width: 90%;
+            max-width: 350px;
+        }
+    }
+
+    /* Extra small devices adjustments */
+    @media (max-width: 500px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        .cta a {
+            padding: 12px 20px;
+            font-size: 1rem;
+        }
+        .feature {
+            padding: 20px 10px;
+        }
+    }
+
+    /* Scrollbar styling for modern browsers */
+    ::-webkit-scrollbar {
+        width: 8px;
+        background: rgba(37,117,252,0.08);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(37,117,252,0.25);
+        border-radius: 8px;
+    }
+
+    /* Selection color */
+    ::selection {
+        background: #2575fc;
+        color: #fff;
+    }
